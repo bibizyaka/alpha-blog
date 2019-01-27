@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   
   root 'articles#index'
   get 'about' => 'pages#about'
+  get 'homepage' => 'pages#homepage'
   
   resources :articles
   
