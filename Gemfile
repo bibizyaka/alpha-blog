@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.3.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.2'
 gem 'puma', '~> 3.0'
@@ -51,6 +51,6 @@ end
 group :production do
   # postgres sql
   gem 'pg'
-  #gem 'rails_12factor'
+  gem 'rails_12factor'
   
 end
