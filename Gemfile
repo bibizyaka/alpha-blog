@@ -5,6 +5,8 @@ ruby '2.6.1'
 gem 'rails', '5.2'
 gem 'puma', '~> 3.0'
 
+gem 'bcrypt', '~> 3.1.12'
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '3.3.7'
 gem 'sass-rails', '~> 5.0'
