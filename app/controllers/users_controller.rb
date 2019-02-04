@@ -30,10 +30,18 @@ class UsersController < ApplicationController
        render "update"
      end
    end
-     private
+   
+   def show
+     @user = User.find(params[:id])
      
-     def user_params
+   end
+   
+   
+     private
+    
+       def user_params
        
-       params.require(:user).permit(:username,:email,:password)
-     end
+         params.require(:user).permit(:username,:email,:password)
+       end
+
 end #class
