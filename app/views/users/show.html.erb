@@ -7,8 +7,19 @@
 </div>
 
   <h4 align="center"><%= @user.username%>'s articles</h4>
+    <div class="center">
+      <%=will_paginate @user_articles %> 
+    </div>
   
-    <%=render "articles/article", obj: @user.articles %>
+    <%#=render "articles/article", obj: @user.articles %>
+    <%=render "articles/article", obj: @user_articles %>
+    
+    <div class="center">
+      <%=will_paginate @user_articles %> 
+    </div>
+    
+    
+    
   <div class="user-actions">
   
     <%=link_to 'Edit User', edit_user_path(@user), class: "btn btn-sm btn-primary" %>
