@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   
   resources :articles
   
+  get 'signup' => 'users#new'
+  #post 'users', to: 'users#create' # OR
+   resources :users, except: [:new]
+  
 
 
 
