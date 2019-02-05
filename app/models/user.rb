@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   
-  has_many :articles
+  has_many :articles, dependent: :destroy
   before_save { self.email = email.downcase } # downcase all created emails to db
   
   validates :username, presence: true, uniqueness: { case_sensitive: false }, length: { minimum: 3, maximum: 25 }
