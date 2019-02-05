@@ -10,10 +10,19 @@
             <%= link_to user.username, user_path(user) %>
           </li>
           <li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
-        </div>
-      </div>
-    </ul>  
+        <% if logged_in? && current_user == user %>
+         <div class="user-actions">
+           <%=link_to ' Edit User', edit_user_path(user), class: "btn btn-xs btn-primary" %>
+           <%=link_to ' Delete User', user_path(user), method: :delete, data: {confirm: "Are you sure?"},  class: "btn btn-xs btn-danger" %>
+           <%=link_to 'Back to Users', users_path, class: "btn btn-xs btn-success" %>
+         </div>
+         <% end %>
+     </div>
+     </div>
+   </ul>
   <% end %>
   <%=will_paginate %>
-</div>
+ 
   
+</div>
+
