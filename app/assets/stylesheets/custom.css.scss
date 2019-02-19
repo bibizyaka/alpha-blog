@@ -36,7 +36,7 @@ $navbar-default-bg: lightgray;
 .jumbotron h1 {
 
   text-align: center;
-  margin-botton: 30px;
+  margin-bottom: 30px;
   letter-spacing: -1px;
   font-weight: bold;
 }
@@ -80,11 +80,24 @@ td {
   padding-bottom: 15px;
 }
 
-
 .listing {
 
   list-style: none;
   padding-left: 0;
+}
+
+.badge {
+
+  background-color: #CEF6F5;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+
+}
+
+.input_checkbox input {
+
+  width: auto !important;
 }
 
 .footer {
@@ -103,6 +116,12 @@ td {
 .footer small {
 
   float: left;
+
+}
+
+ul {
+
+  list-style: none;
 
 }
 

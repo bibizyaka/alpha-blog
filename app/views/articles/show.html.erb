@@ -17,10 +17,13 @@
   <% end %>
   <h4 class="center description"><strong>Description:</strong></h4>
   <hr/>
-  <%= simple_format(@article.description) %> <!-- keeps tabs and everything exactly the same -->
+  <%= simple_format(@article.description) %> <!-- keeps tabs and spaces and everything exactly the same -->
   <h6>Created_at: <%= @article.created_at %></h6>
   <h6>Updated_at: <%= @article.updated_at %></h6>
   
+  <% if @article.categories.any? %>
+    <p>Categories: <%= render @article.categories %></p> <!-- same as @article.categories.each 
+  <% end %>
   <div class="article-actions">
   <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
     <%=link_to 'Edit Article', edit_article_path(@article), class: "btn btn-sm btn-primary" %>
