@@ -14,7 +14,6 @@ class CategoriesController < ApplicationController
   
   def new 
     @category = Category.new
-    
   end
   
   def create
@@ -27,6 +26,21 @@ class CategoriesController < ApplicationController
     end
     
   end #create
+  
+  def edit
+    @category = Category.find(params[:id])
+  end
+    
+  def update
+    @category = Category.find(params[:id])
+    if @category.update(category_params)
+      flash[:success] = "Category name was updated successfully"
+      redirect_to category_path(@category)
+    else
+      flash[:danger] = "Something was wrong..."
+      render "edit"
+    end
+  end
   
   private
   def category_params
